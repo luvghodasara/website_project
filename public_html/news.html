@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Consultant - News</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <style>
+    .navbar-brand {
+      font-size: 24px; 
+      padding-left: 1%;
+    }
+
+    .navbar-nav .nav-link {
+      font-size: 25px; 
+    }
+
+    .news-section {
+      padding: 50px 0;
+    }
+
+    .product-item {
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-image {
+      width: 270px;
+      height: 270px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      transition: transform 0.3s;
+    }
+
+    .product-item h3 {
+      font-size: 18px;
+      margin-top: 10px;
+      white-space: nowrap;
+      position: absolute;
+      bottom: -50px;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: opacity 0.3s, bottom 0.3s;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 5px 0;
+      width: 100%;
+      transform: translateY(100%);
+    }
+
+    .product-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .product-item:hover h3 {
+      bottom: 0;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Menu -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div style="display: flex; align-items: center;">
+        <img src="images/logo.png" width="50" height="50" alt="Logo">
+    </div>
+    <a class="navbar-brand mx-auto" href="#">Apex Consultant</a>
+    <div class="navbar-collapse collapse w-100 order-3">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="news.html">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="blogs.html">Blogs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- News Section Content -->
+  <section id="news" class="container news-section">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="product-item">
+          <h1 style="margin-left: -35%; font-size: 100px; padding-top: 10%;">News</h1>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="product-item">
+          <img src="images/ns1.png" alt="Product 2" class="product-image">
+          <h3 class="product-title">Apex Consultant strives with Targeted Ads</h3>
+        </div>
+        <div class="product-item">
+          <img src="images/ns2.png" alt="Product 4" class="product-image">
+          <h3 class="product-title">New Partnership Announcement</h3>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="product-item">
+          <img src="images/ns3.png" alt="Product 3" class="product-image">
+          <h3 class="product-title">Apex Q2 Financial Reviews</h3>
+        </div>
+        <div class="product-item">
+          <img src="images/ns4.png" alt="Product 5" class="product-image">
+          <h3 class="product-title">Apex Expands Its Global Presence</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Consultant - Home</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  
+  <style>
+    .text-overlay {
+      position: absolute;
+      color: white;
+      padding-top: 20%;
+      padding-left: 1%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar-brand {
+      font-size: 24px; 
+      padding-left: 1%;
+    }
+
+    .navbar-nav .nav-link {
+      font-size: 25px; 
+    }
+
+    .contact-form {
+      width: 110%;
+      max-width: 500px;
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: left; 
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      background-color: transparent;
+    }
+
+    .contact-form label {
+      font-weight: bold;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .contact-form button {
+      width: auto; 
+      padding: 5px 15px; 
+      background-color: #4CAF50; 
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #45a049; 
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Menu -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div style="display: flex; align-items: center;">
+        <img src="images/logo.png" width="50" height="50" alt="Logo">
+    </div>
+    <a class="navbar-brand mx-auto" href="#">Apex Consultant</a>
+    <div class="navbar-collapse collapse w-100 order-3">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="news.html">News</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="blogs.html">Blogs</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contact Section Content -->
+  <section id="contact" class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="text-left">Contact Us</h1>
+        <p class="text-left">Reach out to us by filling out the form, and we will get back to you in no time.</p>
+
+        <form class="contact-form" action="/submit" method="POST">
+          <div class="mb-3">
+            <label for="fullName">Full Name:</label>
+            <input type="text" class="form-control" id="fullName" name="fullName" required>
+          </div>
+          <div class="mb-3">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="query">Query:</label>
+            <textarea class="form-control" id="query" name="query"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+
+      <div class="col-md-6">
+        <h5 style="padding-top: 10%;">Our Offices</h5>
+        <p>75, Pigdons Rd, Deakin University, VIC 3216</p>
+        <h5>Office Address</h5>
+        <!-- Embed Google Map -->
+        <iframe
+          width="100%"
+          height="375"
+          frameborder="0"
+          style="border:0"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d100328.06527645308!2d144.2308621!3d-38.2040448!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad413298609d90f%3A0xc0f7d39b2ebe86b2!2sDeakin%20University!5e0!3m2!1sen!2sau!4v1696166075921!5m2!1sen!2sau"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        if(urlParams.get('submitted') === 'true') {
+            alert('Form submitted successfully!');
+        }
+    });
+</script>
+
+</body>
+</html>

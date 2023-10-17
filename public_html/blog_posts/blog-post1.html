@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post 1 - Apex Consultant</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <style>
+        .navbar-brand {
+      font-size: 24px; 
+      padding-left: 1%;
+    }
+
+    .navbar-nav .nav-link {
+      font-size: 25px; 
+    }
+
+    .comments-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 600px; /* Adjust the width to fit your layout */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .comments-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center; /* Center the "Comments" heading */
+  }
+
+  /* Style the comment list */
+  .comment-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .comment-list li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  /* Style individual comments */
+  .comment-list li:last-child {
+    margin-bottom: 0; /* Remove extra margin from the last comment */
+  }
+
+  /* Style the add comment section */
+  .add-comment {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .add-comment h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .comment-username,
+  .comment-text,
+  .submit-comment {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .submit-comment {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  .submit-comment:hover {
+    background-color: #0056b3;
+  }
+    </style>
+
+</head>
+<body>
+  <!-- Navigation Menu (Same as other pages) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div style="display: flex; align-items: center;">
+        <img src="/images/logo.png" width="50" height="50" alt="Logo">
+    </div>
+    <a class="navbar-brand mx-auto" href="#">Apex Consultant</a>
+    <div class="navbar-collapse collapse w-100 order-3">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/products.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/news.html">News</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/blogs.html">Blogs</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Blog Post Content -->
+  <section id="blog-post" class="container">
+    <h1 class="text-center">5 Proven Strategies for Turbocharging Your Marketing Campaigns</h1>
+    <p class="blog-date">Published on June 1, 2023</p>
+    
+    <div class="blog-content" class="text-justify">
+      <p>In the fast-paced world of marketing, staying ahead is crucial. Here are five strategies to boost your marketing campaigns:</p>
+
+    <ol>
+        <li>
+            <h5>Data-Driven Insights</h5>
+            <p>Leverage data for precise targeting. Analyze audience behavior and preferences to tailor your campaigns effectively.</p>
+        </li>
+        <li>
+            <h5>Content Marketing Excellence</h5>
+            <p>Quality content is key. Create a content strategy that delivers value and resonates with your audience.</p>
+        </li>
+        <li>
+            <h5>Social Media Mastery</h5>
+            <p>Build relationships on social platforms. Customize your approach for each platform to engage your audience effectively.</p>
+        </li>
+        <li>
+            <h5>Email Marketing Precision</h5>
+            <p>Segment and personalize your email campaigns to nurture leads and drive conversions.</p>
+        </li>
+        <li>
+            <h5>Continuous Learning and Adaptation</h5>
+            <p>Stay updated with industry trends and adapt your strategies as needed to keep delivering value.</p>
+        </li>
+    </ol>
+
+    <p>Marketing is dynamic. Embrace these strategies to succeed in this ever-changing landscape.</p>
+</body>
+    </div>
+    
+    <a class="btn btn-primary" href="../blogs.html">Blogs</a>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <!-- Comments Section -->
+<div class="comments-section">
+  <h3>Comments</h3>
+  <ul class="comment-list" data-post-id="1">
+      <!-- Comments will be appended here via JavaScript -->
+  </ul>
+  <div class="add-comment">
+      <h4>Add a Comment:</h4>
+      <input type="text" placeholder="Your Name" class="comment-username">
+      <textarea placeholder="Your Comment" class="comment-text"></textarea>
+      <button class="btn btn-primary submit-comment">Submit</button>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  
+      // Fetch comments for each post when the page loads
+      const commentLists = document.querySelectorAll('.comment-list');
+      commentLists.forEach(list => {
+          const postID = list.getAttribute('data-post-id');
+          fetch(`/getComments/${postID}`)
+              .then(response => response.json())
+              .then(comments => {
+                  comments.forEach(comment => {
+                      const listItem = document.createElement('li');
+                      listItem.innerText = `${comment.username}: ${comment.comment_text}`;
+                      list.appendChild(listItem);
+                  });
+              });
+      });
+  
+      // Add event listener to submit comments
+      const submitButtons = document.querySelectorAll('.submit-comment');
+      submitButtons.forEach(button => {
+          button.addEventListener('click', function() {
+              const postID = this.closest('.comments-section').querySelector('.comment-list').getAttribute('data-post-id');
+              const username = this.closest('.add-comment').querySelector('.comment-username').value;
+              const commentText = this.closest('.add-comment').querySelector('.comment-text').value;
+              
+              const data = {
+                  post_id: postID,
+                  username: username,
+                  comment_text: commentText
+              };
+  
+              fetch('/addComment', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify(data)
+              })
+              .then(response => response.json())
+              .then(result => {
+                  if (result.message === 'Comment added successfully!') {
+                      const listItem = document.createElement('li');
+                      listItem.innerText = `${username}: ${commentText}`;
+                      this.closest('.comments-section').querySelector('.comment-list').appendChild(listItem);
+                  }
+              });
+          });
+      });
+  
+  });
+  </script>
+</body>
+</html>

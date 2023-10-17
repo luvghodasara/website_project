@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Consultant - Products</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  
+  <style>
+    .text-overlay {
+      position: absolute;
+      color: white;
+      padding-top: 20%;
+      padding-left: 1%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .navbar-brand {
+      font-size: 24px; 
+      padding-left: 1%;
+    }
+
+    .navbar-nav .nav-link {
+      font-size: 25px; 
+    }
+
+    .product-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 20px;
+      height: 100%;
+    }
+
+    .product-image {
+      width: 300px;
+      height: 300px; 
+      margin-bottom: 10px;
+    }
+
+     /* Style for the carousel container */
+     .carousel-container {
+      max-width: 600px;
+      margin: 0 auto;
+      border: 2px solid #ddd; /* Add a border */
+      border-radius: 10px; /* Add some border radius */
+      overflow: hidden; /* Hide overflow content */
+    }
+
+    /* Style for the carousel images */
+    .carousel-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensure images fill the container */
+    }
+
+    /* Style for carousel indicators */
+    .carousel-indicators li {
+      background-color: #007bff; /* Indicator color */
+    }
+
+    /* Style for carousel controls */
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+      background-color: #007bff; /* Control arrow color */
+    }
+
+    /* Style for carousel controls on hover */
+    .carousel-control-prev:hover, .carousel-control-next:hover {
+      background-color: #0056b3; /* Control arrow hover color */
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Menu -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div style="display: flex; align-items: center;">
+        <img src="images/logo.png" width="50" height="50" alt="Logo">
+    </div>
+    <a class="navbar-brand mx-auto" href="#">Apex Consultant</a>
+    <div class="navbar-collapse collapse w-100 order-3">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="products.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="news.html">News</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="blogs.html">Blogs</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Products Section Content -->
+  <section id="products" class="container">
+    <h1 class="text-center">Products</h1>
+    
+    <!-- List of products using Bootstrap grid system -->
+    <div class="row">
+      <div class="col-md-4">
+        <div class="product-item">
+          <a href="products/pa.html"> <!-- Link to Predictive Analytics page -->
+            <img src="images/pa.png" alt="Product 1" class="product-image">
+          </a>
+          <h3>Predictive Analytics</h3>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="product-item">
+          <a href="products/sma.html"> <!-- Link to Social Media Strategy page -->
+            <img src="images/sma.png" alt="Product 2" class="product-image">
+          </a>
+          <h3>Social Media Strategy</h3>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="product-item">
+          <a href="products/da.html"> <!-- Link to SEO and Data Analytics page -->
+            <img src="images/da.png" alt="Product 3" class="product-image">
+          </a>
+          <h3>SEO and Data Analytics</h3>
+        </div>
+      </div>
+    </div>
+    
+   <!-- Bootstrap Carousel -->
+   <div class="carousel-container">
+    <div id="productCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <a href="products/pa.html">
+          <img src="images/pa1.png" alt="Carousel Image 1" class="carousel-image">
+        </a>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <a href="products/sma.html">
+          <img src="images/sma1.png" alt="Carousel Image 2" class="carousel-image">
+        </a>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+            <a href="products/da.html">
+          <img src="images/da1.png" alt="Carousel Image 3" class="carousel-image">
+        </a>
+        </div>
+      </div>
+
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#productCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#productCarousel" data-slide-to="1"></li>
+        <li data-target="#productCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Controls -->
+      <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

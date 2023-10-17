@@ -1,0 +1,29 @@
+{
+  "name": "web-server",
+  "version": "1.0.1",
+  "description": "Starter template for an express web server",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon ./server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "web",
+    "server",
+    "template",
+    "sit774",
+    "chess",
+    "Deakin Chess Club"
+  ],
+  "author": "SIT774",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.6.1",
+    "sqlite3": "^5.1.6"
+  }
+}
